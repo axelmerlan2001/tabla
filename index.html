@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+   <style>
+   	table{
+   		border-color: blue;
+   		border-radius: 30px;
+   		background: gray;
+   	}
+   	td{
+   		font-family: Cooper Black;
+   		font-size: 25px;
+   		color: blue;
+   		text-align: center;
+   	}
+   	h1{
+   		font-size: 40px;
+   		font-family: Cooper Black;
+   		color: orange;
+   	}
+   </style>
+
+</head>
+<body>
+
+ <script>
+ 	var nombre = prompt("Nombre del trabajador")
+ 	var depto = prompt("Departamento en el que trabaja")
+ 	var sueldo = prompt("Sueldo")
+ 	var antiguedad = prompt("Antiguedad del empleado")
+ 	var diast = prompt("Dias trabajados")
+ 	var bono
+ 	var subtotal = sueldo * diast;
+    
+    document.write("Subtotal: " + subtotal);
+     var res = confirm("Aplicar descuento a " + nombre + " ?");
+    if(antiguedad>=15){
+    	bono = subtotal * 0.30;
+    } else {
+        bono = subtotal * 0.15;
+    }
+   
+  	var total = bono + subtotal;
+ </script>
+ 
+  <table width="90%">
+  	<tr>
+  		<td>Nombre</td>
+  		<td>Departamento</td>
+  		<td>Sueldo Diario</td>
+  		<td>Antigüedad</td>
+  		<td>Dias Trabajados</td>
+  		<td>Subtotal</td>
+  		<td>Total</td>
+  	</tr>
+  	<tr>
+  		<td><center>
+  			<script>
+  				document.write(nombre);
+  			</script>
+  		</center></td>
+  		<td><center><script>
+  			document.write(depto);
+  		</script></center></td>
+  		<td><center><script>
+  			document.write(sueldo);
+  		</script></center></td>
+  		<td><center><script>
+  			document.write(antiguedad);
+  		</script></center></td>
+  		<td><center><script>
+  			document.write(diast);
+  		</script></center></td>
+  		<td><center><script>
+  			document.write(subtotal);
+  		</script></center></td>
+  		<td><center><script>
+  			document.write(total);
+  		</script></center></td>
+  	</tr>
+  </table>
+
+    <ceter><h1>BY: AXEL URIEL CRISPIN MERLAN</h1></ceter>
+
+</body>
+</html>
