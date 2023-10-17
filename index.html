@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title></title>
 
    <style>
@@ -9,7 +10,7 @@
    	}
    	table{
    		border-color: blue;
-   		border-radius: 30px;
+   		border-radius: 25px;
    		background: gray;
    	}
    	td{
@@ -19,9 +20,14 @@
    		text-align: center;
    	}
    	h1{
-   		font-size: 40px;
+   		font-size: 30px;
    		font-family: Cooper Black;
    		color: red;
+   	}
+   	h2{
+   	   font-size: 45px;
+   		font-family: Cooper Black;
+   		color: blue;	
    	}
    </style>
 
@@ -34,10 +40,11 @@
  	var sueldo = prompt("Sueldo")
  	var antiguedad = prompt("Antiguedad del empleado")
  	var diast = prompt("Dias trabajados")
- 	var bono
+ 	var bono = 0;
  	var subtotal = sueldo * diast;
     
-     var res = confirm("Aplicar descuento a " + nombre + " ?");
+     var res = confirm("Aplicar bono a " + nombre + " ?");
+     if(res)
     if(antiguedad>=15){
     	bono = subtotal * 0.30;
     } else {
@@ -47,6 +54,8 @@
   	var total = bono + subtotal;
  </script>
  
+  <center><h2>-BONO DE ANTIGÜEDAD DE EMPLEADOS-</h2></center>   
+
   <center><table width="90%">
   	<tr>
   		<td>Nombre</td>
@@ -67,19 +76,19 @@
   			document.write(depto);
   		</script></center></td>
   		<td><center><script>
-  			document.write(sueldo);
+  			document.write("$ " + sueldo + " MX");
   		</script></center></td>
   		<td><center><script>
-  			document.write(antiguedad);
+  			document.write(antiguedad + " años");
   		</script></center></td>
   		<td><center><script>
-  			document.write(diast);
+  			document.write(diast + " días");
   		</script></center></td>
   		<td><center><script>
-  			document.write(subtotal);
+  			document.write("$ " + subtotal + " MX");
   		</script></center></td>
   		<td><center><script>
-  			document.write(total);
+  			document.write("$ " + total + " MX");
   		</script></center></td>
   	</tr>
   </table></center>
